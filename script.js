@@ -1660,11 +1660,11 @@ function showSelectionScreen() {
 
 function setRandomBattleBackground() {
     const backgrounds = [
-        '/cenario1.jpg',
-        '/cenario2.jpg',
-        '/cenario3.jpg',
-        '/cenario4.jpg',
-        '/cenario5.jpg'
+        'cenario1.jpg',
+        'cenario2.jpg',
+        'cenario3.jpg',
+        'cenario4.jpg',
+        'cenario5.jpg'
     ];
     const randomIndex = Math.floor(Math.random() * backgrounds.length);
     const battleScene = document.querySelector('.battle-scene');
