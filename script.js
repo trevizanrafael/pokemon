@@ -497,18 +497,6 @@ const pokemonDatabase = {
             new Move("Bulk Up", "normal", 0, 100)
         ]
     },
-    ho_oh: {
-        name: "Ho-Oh",
-        type: "fire",
-        hp: 175,
-        level: 50,
-        moves: [
-            new Move("Sacred Fire", "fire", 100, 95),
-            new Move("Brave Bird", "normal", 120, 100),
-            new Move("Earthquake", "normal", 100, 100),
-            new Move("Recover", "normal", 0, 100)
-        ]
-    },
     jirachi: {
         name: "Jirachi",
         type: "normal",
