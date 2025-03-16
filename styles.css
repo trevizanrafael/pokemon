@@ -1,0 +1,862 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive, sans-serif;
+    image-rendering: pixelated;
+}
+
+body {
+    background-color: #1a1a1a;
+    background-image: linear-gradient(to bottom, #1a1a1a 0%, #2a2a2a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff0000' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    z-index: -1;
+}
+
+.battle-container {
+    width: 1000px;
+    height: 600px;
+    background-color: #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    display: none;
+    border: 6px solid #ff0000;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #ff0000, 0 0 20px #8b0000;
+    }
+    to {
+        box-shadow: 0 0 20px #ff0000, 0 0 30px #8b0000;
+    }
+}
+
+.battle-scene {
+    height: 380px;
+    background: linear-gradient(to bottom, #1a1a1a 0%, #2a2a2a 100%);
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+}
+
+.enemy-info, .player-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 150px;
+}
+
+.enemy-info {
+    flex-direction: row;
+}
+
+.player-info {
+    flex-direction: row;
+}
+
+.pokemon-info {
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.3);
+    border: 4px solid #ff0000;
+    image-rendering: pixelated;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    color: #ffffff;
+}
+
+.name-level {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    color: #ff0000;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.level {
+    font-size: 0.9em;
+}
+
+.hp-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hp-text {
+    font-size: 0.8em;
+    color: #ff0000;
+}
+
+.hp-container {
+    height: 10px;
+    background-color: #333333;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.hp-current {
+    height: 100%;
+    background-color: #ff0000;
+    width: 100%;
+    transition: width 0.5s;
+}
+
+.hp-number {
+    font-size: 0.7em;
+    color: #ffffff;
+}
+
+.pokemon-sprite {
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s;
+    background-color: transparent;
+    image-rendering: pixelated;
+}
+
+.enemy-sprite {
+    align-self: flex-start;
+    margin-top: -20px;
+    margin-right: 30px;
+}
+
+.player-sprite {
+    align-self: flex-end;
+    margin-bottom: -20px;
+    margin-left: 30px;
+}
+
+.aerodactyl {
+    background-image: url('/aerodactyl.gif');
+}
+.aggron {
+    background-image: url('/aggron.gif');
+}
+.alakazam {
+    background-image: url('/alakazam.gif');
+}
+.arceus {
+    background-image: url('/arceus.gif');
+}
+.armaldo {
+    background-image: url('/armaldo.gif');
+}
+.bastiodon {
+    background-image: url('/bastiodon.gif');
+}
+.blastoise {
+    background-image: url('/blastoise.gif');
+}
+.blaziken {
+    background-image: url('/blaziken.gif');
+}
+.carracosta {
+    background-image: url('/carracosta.gif');
+}
+.charizard {
+    background-image: url('/charizard.gif');
+}
+.claydol {
+    background-image: url('/claydol.gif');
+}
+.conkeldurr {
+    background-image: url('/conkeldurr.gif');
+}
+.cresselia {
+    background-image: url('/cresselia.gif');
+}
+.darkrai {
+    background-image: url('/darkrai.gif');
+}
+.donphan {
+    background-image: url('/donphan.gif');
+}
+.dragonite {
+    background-image: url('/dragonite.gif');
+}
+.druddigon {
+    background-image: url('/druddigon.gif');
+}
+.dusknoir {
+    background-image: url('/dusknoir.gif');
+}
+.eelektross {
+    background-image: url('/eelektross.gif');
+}
+.electivire {
+    background-image: url('/electivire.gif');
+}
+.emboar {
+    background-image: url('/emboar.gif');
+}
+.excadrill {
+    background-image: url('/excadrill.gif');
+}
+.flygon {
+    background-image: url('/flygon.gif');
+}
+.gallade {
+    background-image: url('/gallade.gif');
+}
+.garchomp {
+    background-image: url('/garchomp.gif');
+}
+.gardevoir {
+    background-image: url('/gardevoir.gif');
+}
+.gengar {
+    background-image: url('/gengar.gif');
+}
+.gigalith {
+    background-image: url('/gigalith.gif');
+}
+.golem {
+    background-image: url('/golem.gif');
+}
+.gyarados {
+    background-image: url('/gyarados.gif');
+}
+.hariyama {
+    background-image: url('/hariyama.gif');
+}
+.haxorus {
+    background-image: url('/haxorus.gif');
+}
+.heatran {
+    background-image: url('/heatran.gif');
+}
+.hitmonchan {
+    background-image: url('/hitmonchan.gif');
+}
+.hitmonlee {
+    background-image: url('/hitmonlee.gif');
+}
+.ho-oh {
+    background-image: url('/ho-oh.gif');
+}
+.jirachi {
+    background-image: url('/jirachi.gif');
+}
+.krookodile {
+    background-image: url('/krookodile.gif');
+}
+.kyogre {
+    background-image: url('/kyogre.gif');
+}
+.kyurem {
+    background-image: url('/kyurem.gif');
+}
+.lapras {
+    background-image: url('/lapras.gif');
+}
+.latios {
+    background-image: url('/latios.gif');
+}
+.lopunny {
+    background-image: url('/lopunny.gif');
+}
+.lucario {
+    background-image: url('/lucario.gif');
+}
+.lugia {
+    background-image: url('/lugia.gif');
+}
+.machamp {
+    background-image: url('/machamp.gif');
+}
+.magmortar {
+    background-image: url('/magmortar.gif');
+}
+.mamoswine {
+    background-image: url('/mamoswine.gif');
+}
+.medicham {
+    background-image: url('/medicham.gif');
+}
+.metagross {
+    background-image: url('/metagross.gif');
+}
+.mew {
+    background-image: url('/mew.gif');
+}
+.mewtwo {
+    background-image: url('/mewtwo.gif');
+}
+.palkia {
+    background-image: url('/palkia.gif');
+}
+.pikachu {
+    background-image: url('/pikachu.gif');
+}
+.primeape {
+    background-image: url('/primeape.gif');
+}
+.rampardos {
+    background-image: url('/rampardos.gif');
+}
+.rayquaza {
+    background-image: url('/rayquaza.gif');
+}
+.regice {
+    background-image: url('/regice.gif');
+}
+.regirock {
+    background-image: url('/regirock.gif');
+}
+.registeel {
+    background-image: url('/registeel.gif');
+}
+.reshiram {
+    background-image: url('/reshiram.gif');
+}
+.rhyperior {
+    background-image: url('/rhyperior.gif');
+}
+.salamence {
+    background-image: url('/salamence.gif');
+}
+.sawk {
+    background-image: url('/sawk.gif');
+}
+.sceptile {
+    background-image: url('/sceptile.gif');
+}
+.scizor {
+    background-image: url('/scizor.gif');
+}
+.sharpedo {
+    background-image: url('/sharpedo.gif');
+}
+.shiftry {
+    background-image: url('/shiftry.gif');
+}
+.slowbro {
+    background-image: url('/slowbro.gif');
+}
+.snorlax {
+    background-image: url('/snorlax.gif');
+}
+.steelix {
+    background-image: url('/steelix.gif');
+}
+.swampert {
+    background-image: url('/swampert.gif');
+}
+.throh {
+    background-image: url('/throh.gif');
+}
+.torterra {
+    background-image: url('/torterra.gif');
+}
+.typhlosion {
+    background-image: url('/typhlosion.gif');
+}
+.tyranitar {
+    background-image: url('/tyranitar.gif');
+}
+.ursaring {
+    background-image: url('/ursaring.gif');
+}
+.vaporeon {
+    background-image: url('/vaporeon.gif');
+}
+.venusaur {
+    background-image: url('/venusaur.gif');
+}
+.zekrom {
+    background-image: url('/zekrom.gif');
+}
+
+.pokemon-preview {
+    width: 180px;
+    height: 180px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+.pokemon-mini {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pokemon-icon {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 5px;
+}
+
+.pokemon-mini.aerodactyl, .pokemon-icon.aerodactyl, .pokemon-preview.aerodactyl { background-image: url('/aerodactyl.gif'); }
+.pokemon-mini.aggron, .pokemon-icon.aggron, .pokemon-preview.aggron { background-image: url('/aggron.gif'); }
+.pokemon-mini.alakazam, .pokemon-icon.alakazam, .pokemon-preview.alakazam { background-image: url('/alakazam.gif'); }
+.pokemon-mini.arceus, .pokemon-icon.arceus, .pokemon-preview.arceus { background-image: url('/arceus.gif'); }
+.pokemon-mini.armaldo, .pokemon-icon.armaldo, .pokemon-preview.armaldo { background-image: url('/armaldo.gif'); }
+.pokemon-mini.bastiodon, .pokemon-icon.bastiodon, .pokemon-preview.bastiodon { background-image: url('/bastiodon.gif'); }
+.pokemon-mini.blastoise, .pokemon-icon.blastoise, .pokemon-preview.blastoise { background-image: url('/blastoise.gif'); }
+.pokemon-mini.blaziken, .pokemon-icon.blaziken, .pokemon-preview.blaziken { background-image: url('/blaziken.gif'); }
+.pokemon-mini.carracosta, .pokemon-icon.carracosta, .pokemon-preview.carracosta { background-image: url('/carracosta.gif'); }
+.pokemon-mini.charizard, .pokemon-icon.charizard, .pokemon-preview.charizard { background-image: url('/charizard.gif'); }
+.pokemon-mini.claydol, .pokemon-icon.claydol, .pokemon-preview.claydol { background-image: url('/claydol.gif'); }
+.pokemon-mini.conkeldurr, .pokemon-icon.conkeldurr, .pokemon-preview.conkeldurr { background-image: url('/conkeldurr.gif'); }
+.pokemon-mini.cresselia, .pokemon-icon.cresselia, .pokemon-preview.cresselia { background-image: url('/cresselia.gif'); }
+.pokemon-mini.darkrai, .pokemon-icon.darkrai, .pokemon-preview.darkrai { background-image: url('/darkrai.gif'); }
+.pokemon-mini.donphan, .pokemon-icon.donphan, .pokemon-preview.donphan { background-image: url('/donphan.gif'); }
+.pokemon-mini.dragonite, .pokemon-icon.dragonite, .pokemon-preview.dragonite { background-image: url('/dragonite.gif'); }
+.pokemon-mini.druddigon, .pokemon-icon.druddigon, .pokemon-preview.druddigon { background-image: url('/druddigon.gif'); }
+.pokemon-mini.dusknoir, .pokemon-icon.dusknoir, .pokemon-preview.dusknoir { background-image: url('/dusknoir.gif'); }
+.pokemon-mini.eelektross, .pokemon-icon.eelektross, .pokemon-preview.eelektross { background-image: url('/eelektross.gif'); }
+.pokemon-mini.electivire, .pokemon-icon.electivire, .pokemon-preview.electivire { background-image: url('/electivire.gif'); }
+.pokemon-mini.emboar, .pokemon-icon.emboar, .pokemon-preview.emboar { background-image: url('/emboar.gif'); }
+.pokemon-mini.excadrill, .pokemon-icon.excadrill, .pokemon-preview.excadrill { background-image: url('/excadrill.gif'); }
+.pokemon-mini.flygon, .pokemon-icon.flygon, .pokemon-preview.flygon { background-image: url('/flygon.gif'); }
+.pokemon-mini.gallade, .pokemon-icon.gallade, .pokemon-preview.gallade { background-image: url('/gallade.gif'); }
+.pokemon-mini.garchomp, .pokemon-icon.garchomp, .pokemon-preview.garchomp { background-image: url('/garchomp.gif'); }
+.pokemon-mini.gardevoir, .pokemon-icon.gardevoir, .pokemon-preview.gardevoir { background-image: url('/gardevoir.gif'); }
+.pokemon-mini.gengar, .pokemon-icon.gengar, .pokemon-preview.gengar { background-image: url('/gengar.gif'); }
+.pokemon-mini.gigalith, .pokemon-icon.gigalith, .pokemon-preview.gigalith { background-image: url('/gigalith.gif'); }
+.pokemon-mini.golem, .pokemon-icon.golem, .pokemon-preview.golem { background-image: url('/golem.gif'); }
+.pokemon-mini.gyarados, .pokemon-icon.gyarados, .pokemon-preview.gyarados { background-image: url('/gyarados.gif'); }
+.pokemon-mini.hariyama, .pokemon-icon.hariyama, .pokemon-preview.hariyama { background-image: url('/hariyama.gif'); }
+.pokemon-mini.haxorus, .pokemon-icon.haxorus, .pokemon-preview.haxorus { background-image: url('/haxorus.gif'); }
+.pokemon-mini.heatran, .pokemon-icon.heatran, .pokemon-preview.heatran { background-image: url('/heatran.gif'); }
+.pokemon-mini.hitmonchan, .pokemon-icon.hitmonchan, .pokemon-preview.hitmonchan { background-image: url('/hitmonchan.gif'); }
+.pokemon-mini.hitmonlee, .pokemon-icon.hitmonlee, .pokemon-preview.hitmonlee { background-image: url('/hitmonlee.gif'); }
+.pokemon-mini.ho-oh, .pokemon-icon.ho-oh, .pokemon-preview.ho-oh { background-image: url('/ho-oh.gif'); }
+.pokemon-mini.jirachi, .pokemon-icon.jirachi, .pokemon-preview.jirachi { background-image: url('/jirachi.gif'); }
+.pokemon-mini.krookodile, .pokemon-icon.krookodile, .pokemon-preview.krookodile { background-image: url('/krookodile.gif'); }
+.pokemon-mini.kyogre, .pokemon-icon.kyogre, .pokemon-preview.kyogre { background-image: url('/kyogre.gif'); }
+.pokemon-mini.kyurem, .pokemon-icon.kyurem, .pokemon-preview.kyurem { background-image: url('/kyurem.gif'); }
+.pokemon-mini.lapras, .pokemon-icon.lapras, .pokemon-preview.lapras { background-image: url('/lapras.gif'); }
+.pokemon-mini.latios, .pokemon-icon.latios, .pokemon-preview.latios { background-image: url('/latios.gif'); }
+.pokemon-mini.lopunny, .pokemon-icon.lopunny, .pokemon-preview.lopunny { background-image: url('/lopunny.gif'); }
+.pokemon-mini.lucario, .pokemon-icon.lucario, .pokemon-preview.lucario { background-image: url('/lucario.gif'); }
+.pokemon-mini.lugia, .pokemon-icon.lugia, .pokemon-preview.lugia { background-image: url('/lugia.gif'); }
+.pokemon-mini.machamp, .pokemon-icon.machamp, .pokemon-preview.machamp { background-image: url('/machamp.gif'); }
+.pokemon-mini.magmortar, .pokemon-icon.magmortar, .pokemon-preview.magmortar { background-image: url('/magmortar.gif'); }
+.pokemon-mini.mamoswine, .pokemon-icon.mamoswine, .pokemon-preview.mamoswine { background-image: url('/mamoswine.gif'); }
+.pokemon-mini.medicham, .pokemon-icon.medicham, .pokemon-preview.medicham { background-image: url('/medicham.gif'); }
+.pokemon-mini.metagross, .pokemon-icon.metagross, .pokemon-preview.metagross { background-image: url('/metagross.gif'); }
+.pokemon-mini.mew, .pokemon-icon.mew, .pokemon-preview.mew { background-image: url('/mew.gif'); }
+.pokemon-mini.mewtwo, .pokemon-icon.mewtwo, .pokemon-preview.mewtwo { background-image: url('/mewtwo.gif'); }
+.pokemon-mini.palkia, .pokemon-icon.palkia, .pokemon-preview.palkia { background-image: url('/palkia.gif'); }
+.pokemon-mini.pikachu, .pokemon-icon.pikachu, .pokemon-preview.pikachu { background-image: url('/pikachu.gif'); }
+.pokemon-mini.primeape, .pokemon-icon.primeape, .pokemon-preview.primeape { background-image: url('/primeape.gif'); }
+.pokemon-mini.rampardos, .pokemon-icon.rampardos, .pokemon-preview.rampardos { background-image: url('/rampardos.gif'); }
+.pokemon-mini.rayquaza, .pokemon-icon.rayquaza, .pokemon-preview.rayquaza { background-image: url('/rayquaza.gif'); }
+.pokemon-mini.regice, .pokemon-icon.regice, .pokemon-preview.regice { background-image: url('/regice.gif'); }
+.pokemon-mini.regirock, .pokemon-icon.regirock, .pokemon-preview.regirock { background-image: url('/regirock.gif'); }
+.pokemon-mini.registeel, .pokemon-icon.registeel, .pokemon-preview.registeel { background-image: url('/registeel.gif'); }
+.pokemon-mini.reshiram, .pokemon-icon.reshiram, .pokemon-preview.reshiram { background-image: url('/reshiram.gif'); }
+.pokemon-mini.rhyperior, .pokemon-icon.rhyperior, .pokemon-preview.rhyperior { background-image: url('/rhyperior.gif'); }
+.pokemon-mini.salamence, .pokemon-icon.salamence, .pokemon-preview.salamence { background-image: url('/salamence.gif'); }
+.pokemon-mini.sawk, .pokemon-icon.sawk, .pokemon-preview.sawk { background-image: url('/sawk.gif'); }
+.pokemon-mini.sceptile, .pokemon-icon.sceptile, .pokemon-preview.sceptile { background-image: url('/sceptile.gif'); }
+.pokemon-mini.scizor, .pokemon-icon.scizor, .pokemon-preview.scizor { background-image: url('/scizor.gif'); }
+.pokemon-mini.sharpedo, .pokemon-icon.sharpedo, .pokemon-preview.sharpedo { background-image: url('/sharpedo.gif'); }
+.pokemon-mini.shiftry, .pokemon-icon.shiftry, .pokemon-preview.shiftry { background-image: url('/shiftry.gif'); }
+.pokemon-mini.slowbro, .pokemon-icon.slowbro, .pokemon-preview.slowbro { background-image: url('/slowbro.gif'); }
+.pokemon-mini.snorlax, .pokemon-icon.snorlax, .pokemon-preview.snorlax { background-image: url('/snorlax.gif'); }
+.pokemon-mini.steelix, .pokemon-icon.steelix, .pokemon-preview.steelix { background-image: url('/steelix.gif'); }
+.pokemon-mini.swampert, .pokemon-icon.swampert, .pokemon-preview.swampert { background-image: url('/swampert.gif'); }
+.pokemon-mini.throh, .pokemon-icon.throh, .pokemon-preview.throh { background-image: url('/throh.gif'); }
+.pokemon-mini.torterra, .pokemon-icon.torterra, .pokemon-preview.torterra { background-image: url('/torterra.gif'); }
+.pokemon-mini.typhlosion, .pokemon-icon.typhlosion, .pokemon-preview.typhlosion { background-image: url('/typhlosion.gif'); }
+.pokemon-mini.tyranitar, .pokemon-icon.tyranitar, .pokemon-preview.tyranitar { background-image: url('/tyranitar.gif'); }
+.pokemon-mini.ursaring, .pokemon-icon.ursaring, .pokemon-preview.ursaring { background-image: url('/ursaring.gif'); }
+.pokemon-mini.vaporeon, .pokemon-icon.vaporeon, .pokemon-preview.vaporeon { background-image: url('/vaporeon.gif'); }
+.pokemon-mini.venusaur, .pokemon-icon.venusaur, .pokemon-preview.venusaur { background-image: url('/venusaur.gif'); }
+.pokemon-mini.zekrom, .pokemon-icon.zekrom, .pokemon-preview.zekrom { background-image: url('/zekrom.gif'); }
+
+.attacking {
+    animation: attack-animation 0.5s ease-in-out;
+}
+
+.hit {
+    animation: hit-animation 0.3s ease-in-out;
+}
+
+@keyframes attack-animation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(20px); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes hit-animation {
+    0% { transform: translateX(0); opacity: 1; }
+    25% { transform: translateX(-10px); opacity: 0.5; }
+    50% { transform: translateX(8px); opacity: 0.7; }
+    75% { transform: translateX(-5px); opacity: 0.9; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.battle-options {
+    height: 220px;
+    background-color: #000000;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid #ff0000;
+}
+
+.message-box {
+    background-color: #1a1a1a;
+    border: 4px solid #ff0000;
+    border-radius: 5px;
+    padding: 10px;
+    height: 70px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    box-shadow: inset 0 0 0 2px #000000, 0 2px 0 #8b0000;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    color: #ffffff;
+}
+
+.menu {
+    display: flex;
+    height: 110px;
+}
+
+.main-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.attack-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    display: none;
+}
+
+.menu-btn, .attack-btn {
+    background-color: #1a1a1a;
+    border: 4px solid #ff0000;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: all 0.2s;
+    box-shadow: 0 4px 0 #8b0000;
+    position: relative;
+    top: 0;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #2a2a2a 0%, #1a1a1a 100%);
+}
+
+.menu-btn:hover, .attack-btn:hover {
+    background: linear-gradient(to bottom, #3a3a3a 0%, #2a2a2a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #8b0000;
+}
+
+.menu-btn:active, .attack-btn:active {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 0 #8b0000;
+    top: 2px;
+}
+
+/* Team selection styles */
+.selection-instruction {
+    color: #ff0000;
+    margin-bottom: 15px;
+    font-size: 0.8em;
+}
+
+.pokemon-selection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.team-preview {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    border: 4px solid #ff0000;
+}
+
+.team-preview h3 {
+    margin-bottom: 15px;
+    color: #ff0000;
+    font-size: 0.9em;
+}
+
+.team-slots {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.team-slot {
+    width: 120px;
+    height: 120px;
+    background-color: #2a2a2a;
+    border: 3px dashed #ff0000;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #ffffff;
+}
+
+.team-slot.filled {
+    border-style: solid;
+    background-color: #000000;
+}
+
+.team-slot .remove-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    background-color: #ff0000;
+    color: white;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.8em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+/* Pokemon switch menu */
+.pokemon-switch-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    display: none;
+}
+
+.switch-btn {
+    background-color: #1a1a1a;
+    border: 4px solid #ff0000;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 0.7em;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 0 #8b0000;
+    position: relative;
+    top: 0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.switch-btn:hover {
+    background-color: #2a2a2a;
+}
+
+.switch-btn:active {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 0 #8b0000;
+    top: 2px;
+}
+
+.switch-btn.fainted {
+    background-color: #3a0000;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.hp-mini {
+    height: 5px;
+    width: 100%;
+    background-color: #333333;
+    border: 1px solid #ff0000;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 3px;
+}
+
+.hp-mini-current {
+    height: 100%;
+    background-color: #ff0000;
+    width: 100%;
+}
+
+/* Selection screen */
+.selection-screen {
+    width: 1000px;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 0 4px #ff0000, 0 8px 0 #8b0000;
+    text-align: center;
+    image-rendering: pixelated;
+    border: 4px solid #1a1a1a;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    animation: float 3s infinite alternate;
+    color: #ffffff;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+.pokemon-name {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+#start-battle {
+    background-color: #ff0000;
+    color: white;
+    border: 4px solid #8b0000;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s;
+    box-shadow: 0 4px 0 #8b0000;
+    position: relative;
+    top: 0;
+    background: linear-gradient(to bottom, #ff3333 0%, #ff0000 100%);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+#start-battle:hover {
+    background: linear-gradient(to bottom, #ff5555 0%, #ff3333 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #8b0000;
+}
+
+#start-battle:active {
+    top: 2px;
+    box-shadow: 0 2px 0 #8b0000;
+}
+
+#start-battle:disabled {
+    background-color: #666666;
+    cursor: not-allowed;
+}
+
+.game-over {
+    width: 500px;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 0 4px #ff0000, 0 8px 0 #8b0000;
+    display: none;
+    border: 4px solid #1a1a1a;
+    color: #ffffff;
+}
+
+#play-again {
+    background-color: #ff0000;
+    color: white;
+    border: 4px solid #8b0000;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 0 #8b0000;
+    position: relative;
+    top: 0;
+    background: linear-gradient(to bottom, #ff3333 0%, #ff0000 100%);
+}
+
+#play-again:hover {
+    background: linear-gradient(to bottom, #ff5555 0%, #ff3333 100%);
+}
+
+#play-again:active {
+    top: 2px;
+    box-shadow: 0 2px 0 #8b0000;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #ff0000;
+}
+
+.pokemon-option {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(26, 26, 26, 0.7);
+    border: 2px solid transparent;
+    color: #ffffff;
+}
+
+.pokemon-option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+    border-color: #ff0000;
+    background-color: rgba(26, 26, 26, 0.9);
+}
