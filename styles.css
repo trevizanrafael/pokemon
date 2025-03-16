@@ -265,9 +265,6 @@ body::before {
 .hitmonlee {
     background-image: url('hitmonlee.gif');
 }
-.ho-oh {
-    background-image: url('hooh.gif');
-}
 .jirachi {
     background-image: url('jirachi.gif');
 }
@@ -463,7 +460,6 @@ body::before {
 .pokemon-mini.heatran, .pokemon-icon.heatran, .pokemon-preview.heatran { background-image: url('heatran.gif'); }
 .pokemon-mini.hitmonchan, .pokemon-icon.hitmonchan, .pokemon-preview.hitmonchan { background-image: url('hitmonchan.gif'); }
 .pokemon-mini.hitmonlee, .pokemon-icon.hitmonlee, .pokemon-preview.hitmonlee { background-image: url('hitmonlee.gif'); }
-.pokemon-mini.ho-oh, .pokemon-icon.ho-oh, .pokemon-preview.ho-oh { background-image: url('ho-oh.gif'); }
 .pokemon-mini.jirachi, .pokemon-icon.jirachi, .pokemon-preview.jirachi { background-image: url('jirachi.gif'); }
 .pokemon-mini.krookodile, .pokemon-icon.krookodile, .pokemon-preview.krookodile { background-image: url('krookodile.gif'); }
 .pokemon-mini.kyogre, .pokemon-icon.kyogre, .pokemon-preview.kyogre { background-image: url('kyogre.gif'); }
