@@ -25,7 +25,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff0000' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:imagesvg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http:www.w3.org2000svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff0000' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'%3E%3Cg%3E%3Cg%3E%3Csvg%3E");
     z-index: -1;
 }
 
@@ -161,244 +161,244 @@ body::before {
 }
 
 .aerodactyl {
-    background-image: url('/aerodactyl.gif');
+    background-image: url('aerodactyl.gif');
 }
 .aggron {
-    background-image: url('/aggron.gif');
+    background-image: url('aggron.gif');
 }
 .alakazam {
-    background-image: url('/alakazam.gif');
+    background-image: url('alakazam.gif');
 }
 .arceus {
-    background-image: url('/arceus.gif');
+    background-image: url('arceus.gif');
 }
 .armaldo {
-    background-image: url('/armaldo.gif');
+    background-image: url('armaldo.gif');
 }
 .bastiodon {
-    background-image: url('/bastiodon.gif');
+    background-image: url('bastiodon.gif');
 }
 .blastoise {
-    background-image: url('/blastoise.gif');
+    background-image: url('blastoise.gif');
 }
 .blaziken {
-    background-image: url('/blaziken.gif');
+    background-image: url('blaziken.gif');
 }
 .carracosta {
-    background-image: url('/carracosta.gif');
+    background-image: url('carracosta.gif');
 }
 .charizard {
-    background-image: url('/charizard.gif');
+    background-image: url('charizard.gif');
 }
 .claydol {
-    background-image: url('/claydol.gif');
+    background-image: url('claydol.gif');
 }
 .conkeldurr {
-    background-image: url('/conkeldurr.gif');
+    background-image: url('conkeldurr.gif');
 }
 .cresselia {
-    background-image: url('/cresselia.gif');
+    background-image: url('cresselia.gif');
 }
 .darkrai {
-    background-image: url('/darkrai.gif');
+    background-image: url('darkrai.gif');
 }
 .donphan {
-    background-image: url('/donphan.gif');
+    background-image: url('donphan.gif');
 }
 .dragonite {
-    background-image: url('/dragonite.gif');
+    background-image: url('dragonite.gif');
 }
 .druddigon {
-    background-image: url('/druddigon.gif');
+    background-image: url('druddigon.gif');
 }
 .dusknoir {
-    background-image: url('/dusknoir.gif');
+    background-image: url('dusknoir.gif');
 }
 .eelektross {
-    background-image: url('/eelektross.gif');
+    background-image: url('eelektross.gif');
 }
 .electivire {
-    background-image: url('/electivire.gif');
+    background-image: url('electivire.gif');
 }
 .emboar {
-    background-image: url('/emboar.gif');
+    background-image: url('emboar.gif');
 }
 .excadrill {
-    background-image: url('/excadrill.gif');
+    background-image: url('excadrill.gif');
 }
 .flygon {
-    background-image: url('/flygon.gif');
+    background-image: url('flygon.gif');
 }
 .gallade {
-    background-image: url('/gallade.gif');
+    background-image: url('gallade.gif');
 }
 .garchomp {
-    background-image: url('/garchomp.gif');
+    background-image: url('garchomp.gif');
 }
 .gardevoir {
-    background-image: url('/gardevoir.gif');
+    background-image: url('gardevoir.gif');
 }
 .gengar {
-    background-image: url('/gengar.gif');
+    background-image: url('gengar.gif');
 }
 .gigalith {
-    background-image: url('/gigalith.gif');
+    background-image: url('gigalith.gif');
 }
 .golem {
-    background-image: url('/golem.gif');
+    background-image: url('golem.gif');
 }
 .gyarados {
-    background-image: url('/gyarados.gif');
+    background-image: url('gyarados.gif');
 }
 .hariyama {
-    background-image: url('/hariyama.gif');
+    background-image: url('hariyama.gif');
 }
 .haxorus {
-    background-image: url('/haxorus.gif');
+    background-image: url('haxorus.gif');
 }
 .heatran {
-    background-image: url('/heatran.gif');
+    background-image: url('heatran.gif');
 }
 .hitmonchan {
-    background-image: url('/hitmonchan.gif');
+    background-image: url('hitmonchan.gif');
 }
 .hitmonlee {
-    background-image: url('/hitmonlee.gif');
+    background-image: url('hitmonlee.gif');
 }
 .ho-oh {
-    background-image: url('/ho-oh.gif');
+    background-image: url('ho-oh.gif');
 }
 .jirachi {
-    background-image: url('/jirachi.gif');
+    background-image: url('jirachi.gif');
 }
 .krookodile {
-    background-image: url('/krookodile.gif');
+    background-image: url('krookodile.gif');
 }
 .kyogre {
-    background-image: url('/kyogre.gif');
+    background-image: url('kyogre.gif');
 }
 .kyurem {
-    background-image: url('/kyurem.gif');
+    background-image: url('kyurem.gif');
 }
 .lapras {
-    background-image: url('/lapras.gif');
+    background-image: url('lapras.gif');
 }
 .latios {
-    background-image: url('/latios.gif');
+    background-image: url('latios.gif');
 }
 .lopunny {
-    background-image: url('/lopunny.gif');
+    background-image: url('lopunny.gif');
 }
 .lucario {
-    background-image: url('/lucario.gif');
+    background-image: url('lucario.gif');
 }
 .lugia {
-    background-image: url('/lugia.gif');
+    background-image: url('lugia.gif');
 }
 .machamp {
-    background-image: url('/machamp.gif');
+    background-image: url('machamp.gif');
 }
 .magmortar {
-    background-image: url('/magmortar.gif');
+    background-image: url('magmortar.gif');
 }
 .mamoswine {
-    background-image: url('/mamoswine.gif');
+    background-image: url('mamoswine.gif');
 }
 .medicham {
-    background-image: url('/medicham.gif');
+    background-image: url('medicham.gif');
 }
 .metagross {
-    background-image: url('/metagross.gif');
+    background-image: url('metagross.gif');
 }
 .mew {
-    background-image: url('/mew.gif');
+    background-image: url('mew.gif');
 }
 .mewtwo {
-    background-image: url('/mewtwo.gif');
+    background-image: url('mewtwo.gif');
 }
 .palkia {
-    background-image: url('/palkia.gif');
+    background-image: url('palkia.gif');
 }
 .pikachu {
-    background-image: url('/pikachu.gif');
+    background-image: url('pikachu.gif');
 }
 .primeape {
-    background-image: url('/primeape.gif');
+    background-image: url('primeape.gif');
 }
 .rampardos {
-    background-image: url('/rampardos.gif');
+    background-image: url('rampardos.gif');
 }
 .rayquaza {
-    background-image: url('/rayquaza.gif');
+    background-image: url('rayquaza.gif');
 }
 .regice {
-    background-image: url('/regice.gif');
+    background-image: url('regice.gif');
 }
 .regirock {
-    background-image: url('/regirock.gif');
+    background-image: url('regirock.gif');
 }
 .registeel {
-    background-image: url('/registeel.gif');
+    background-image: url('registeel.gif');
 }
 .reshiram {
-    background-image: url('/reshiram.gif');
+    background-image: url('reshiram.gif');
 }
 .rhyperior {
-    background-image: url('/rhyperior.gif');
+    background-image: url('rhyperior.gif');
 }
 .salamence {
-    background-image: url('/salamence.gif');
+    background-image: url('salamence.gif');
 }
 .sawk {
-    background-image: url('/sawk.gif');
+    background-image: url('sawk.gif');
 }
 .sceptile {
-    background-image: url('/sceptile.gif');
+    background-image: url('sceptile.gif');
 }
 .scizor {
-    background-image: url('/scizor.gif');
+    background-image: url('scizor.gif');
 }
 .sharpedo {
-    background-image: url('/sharpedo.gif');
+    background-image: url('sharpedo.gif');
 }
 .shiftry {
-    background-image: url('/shiftry.gif');
+    background-image: url('shiftry.gif');
 }
 .slowbro {
-    background-image: url('/slowbro.gif');
+    background-image: url('slowbro.gif');
 }
 .snorlax {
-    background-image: url('/snorlax.gif');
+    background-image: url('snorlax.gif');
 }
 .steelix {
-    background-image: url('/steelix.gif');
+    background-image: url('steelix.gif');
 }
 .swampert {
-    background-image: url('/swampert.gif');
+    background-image: url('swampert.gif');
 }
 .throh {
-    background-image: url('/throh.gif');
+    background-image: url('throh.gif');
 }
 .torterra {
-    background-image: url('/torterra.gif');
+    background-image: url('torterra.gif');
 }
 .typhlosion {
-    background-image: url('/typhlosion.gif');
+    background-image: url('typhlosion.gif');
 }
 .tyranitar {
-    background-image: url('/tyranitar.gif');
+    background-image: url('tyranitar.gif');
 }
 .ursaring {
-    background-image: url('/ursaring.gif');
+    background-image: url('ursaring.gif');
 }
 .vaporeon {
-    background-image: url('/vaporeon.gif');
+    background-image: url('vaporeon.gif');
 }
 .venusaur {
-    background-image: url('/venusaur.gif');
+    background-image: url('venusaur.gif');
 }
 .zekrom {
-    background-image: url('/zekrom.gif');
+    background-image: url('zekrom.gif');
 }
 
 .pokemon-preview {
@@ -428,86 +428,86 @@ body::before {
     margin-right: 5px;
 }
 
-.pokemon-mini.aerodactyl, .pokemon-icon.aerodactyl, .pokemon-preview.aerodactyl { background-image: url('/aerodactyl.gif'); }
-.pokemon-mini.aggron, .pokemon-icon.aggron, .pokemon-preview.aggron { background-image: url('/aggron.gif'); }
-.pokemon-mini.alakazam, .pokemon-icon.alakazam, .pokemon-preview.alakazam { background-image: url('/alakazam.gif'); }
-.pokemon-mini.arceus, .pokemon-icon.arceus, .pokemon-preview.arceus { background-image: url('/arceus.gif'); }
-.pokemon-mini.armaldo, .pokemon-icon.armaldo, .pokemon-preview.armaldo { background-image: url('/armaldo.gif'); }
-.pokemon-mini.bastiodon, .pokemon-icon.bastiodon, .pokemon-preview.bastiodon { background-image: url('/bastiodon.gif'); }
-.pokemon-mini.blastoise, .pokemon-icon.blastoise, .pokemon-preview.blastoise { background-image: url('/blastoise.gif'); }
-.pokemon-mini.blaziken, .pokemon-icon.blaziken, .pokemon-preview.blaziken { background-image: url('/blaziken.gif'); }
-.pokemon-mini.carracosta, .pokemon-icon.carracosta, .pokemon-preview.carracosta { background-image: url('/carracosta.gif'); }
-.pokemon-mini.charizard, .pokemon-icon.charizard, .pokemon-preview.charizard { background-image: url('/charizard.gif'); }
-.pokemon-mini.claydol, .pokemon-icon.claydol, .pokemon-preview.claydol { background-image: url('/claydol.gif'); }
-.pokemon-mini.conkeldurr, .pokemon-icon.conkeldurr, .pokemon-preview.conkeldurr { background-image: url('/conkeldurr.gif'); }
-.pokemon-mini.cresselia, .pokemon-icon.cresselia, .pokemon-preview.cresselia { background-image: url('/cresselia.gif'); }
-.pokemon-mini.darkrai, .pokemon-icon.darkrai, .pokemon-preview.darkrai { background-image: url('/darkrai.gif'); }
-.pokemon-mini.donphan, .pokemon-icon.donphan, .pokemon-preview.donphan { background-image: url('/donphan.gif'); }
-.pokemon-mini.dragonite, .pokemon-icon.dragonite, .pokemon-preview.dragonite { background-image: url('/dragonite.gif'); }
-.pokemon-mini.druddigon, .pokemon-icon.druddigon, .pokemon-preview.druddigon { background-image: url('/druddigon.gif'); }
-.pokemon-mini.dusknoir, .pokemon-icon.dusknoir, .pokemon-preview.dusknoir { background-image: url('/dusknoir.gif'); }
-.pokemon-mini.eelektross, .pokemon-icon.eelektross, .pokemon-preview.eelektross { background-image: url('/eelektross.gif'); }
-.pokemon-mini.electivire, .pokemon-icon.electivire, .pokemon-preview.electivire { background-image: url('/electivire.gif'); }
-.pokemon-mini.emboar, .pokemon-icon.emboar, .pokemon-preview.emboar { background-image: url('/emboar.gif'); }
-.pokemon-mini.excadrill, .pokemon-icon.excadrill, .pokemon-preview.excadrill { background-image: url('/excadrill.gif'); }
-.pokemon-mini.flygon, .pokemon-icon.flygon, .pokemon-preview.flygon { background-image: url('/flygon.gif'); }
-.pokemon-mini.gallade, .pokemon-icon.gallade, .pokemon-preview.gallade { background-image: url('/gallade.gif'); }
-.pokemon-mini.garchomp, .pokemon-icon.garchomp, .pokemon-preview.garchomp { background-image: url('/garchomp.gif'); }
-.pokemon-mini.gardevoir, .pokemon-icon.gardevoir, .pokemon-preview.gardevoir { background-image: url('/gardevoir.gif'); }
-.pokemon-mini.gengar, .pokemon-icon.gengar, .pokemon-preview.gengar { background-image: url('/gengar.gif'); }
-.pokemon-mini.gigalith, .pokemon-icon.gigalith, .pokemon-preview.gigalith { background-image: url('/gigalith.gif'); }
-.pokemon-mini.golem, .pokemon-icon.golem, .pokemon-preview.golem { background-image: url('/golem.gif'); }
-.pokemon-mini.gyarados, .pokemon-icon.gyarados, .pokemon-preview.gyarados { background-image: url('/gyarados.gif'); }
-.pokemon-mini.hariyama, .pokemon-icon.hariyama, .pokemon-preview.hariyama { background-image: url('/hariyama.gif'); }
-.pokemon-mini.haxorus, .pokemon-icon.haxorus, .pokemon-preview.haxorus { background-image: url('/haxorus.gif'); }
-.pokemon-mini.heatran, .pokemon-icon.heatran, .pokemon-preview.heatran { background-image: url('/heatran.gif'); }
-.pokemon-mini.hitmonchan, .pokemon-icon.hitmonchan, .pokemon-preview.hitmonchan { background-image: url('/hitmonchan.gif'); }
-.pokemon-mini.hitmonlee, .pokemon-icon.hitmonlee, .pokemon-preview.hitmonlee { background-image: url('/hitmonlee.gif'); }
-.pokemon-mini.ho-oh, .pokemon-icon.ho-oh, .pokemon-preview.ho-oh { background-image: url('/ho-oh.gif'); }
-.pokemon-mini.jirachi, .pokemon-icon.jirachi, .pokemon-preview.jirachi { background-image: url('/jirachi.gif'); }
-.pokemon-mini.krookodile, .pokemon-icon.krookodile, .pokemon-preview.krookodile { background-image: url('/krookodile.gif'); }
-.pokemon-mini.kyogre, .pokemon-icon.kyogre, .pokemon-preview.kyogre { background-image: url('/kyogre.gif'); }
-.pokemon-mini.kyurem, .pokemon-icon.kyurem, .pokemon-preview.kyurem { background-image: url('/kyurem.gif'); }
-.pokemon-mini.lapras, .pokemon-icon.lapras, .pokemon-preview.lapras { background-image: url('/lapras.gif'); }
-.pokemon-mini.latios, .pokemon-icon.latios, .pokemon-preview.latios { background-image: url('/latios.gif'); }
-.pokemon-mini.lopunny, .pokemon-icon.lopunny, .pokemon-preview.lopunny { background-image: url('/lopunny.gif'); }
-.pokemon-mini.lucario, .pokemon-icon.lucario, .pokemon-preview.lucario { background-image: url('/lucario.gif'); }
-.pokemon-mini.lugia, .pokemon-icon.lugia, .pokemon-preview.lugia { background-image: url('/lugia.gif'); }
-.pokemon-mini.machamp, .pokemon-icon.machamp, .pokemon-preview.machamp { background-image: url('/machamp.gif'); }
-.pokemon-mini.magmortar, .pokemon-icon.magmortar, .pokemon-preview.magmortar { background-image: url('/magmortar.gif'); }
-.pokemon-mini.mamoswine, .pokemon-icon.mamoswine, .pokemon-preview.mamoswine { background-image: url('/mamoswine.gif'); }
-.pokemon-mini.medicham, .pokemon-icon.medicham, .pokemon-preview.medicham { background-image: url('/medicham.gif'); }
-.pokemon-mini.metagross, .pokemon-icon.metagross, .pokemon-preview.metagross { background-image: url('/metagross.gif'); }
-.pokemon-mini.mew, .pokemon-icon.mew, .pokemon-preview.mew { background-image: url('/mew.gif'); }
-.pokemon-mini.mewtwo, .pokemon-icon.mewtwo, .pokemon-preview.mewtwo { background-image: url('/mewtwo.gif'); }
-.pokemon-mini.palkia, .pokemon-icon.palkia, .pokemon-preview.palkia { background-image: url('/palkia.gif'); }
-.pokemon-mini.pikachu, .pokemon-icon.pikachu, .pokemon-preview.pikachu { background-image: url('/pikachu.gif'); }
-.pokemon-mini.primeape, .pokemon-icon.primeape, .pokemon-preview.primeape { background-image: url('/primeape.gif'); }
-.pokemon-mini.rampardos, .pokemon-icon.rampardos, .pokemon-preview.rampardos { background-image: url('/rampardos.gif'); }
-.pokemon-mini.rayquaza, .pokemon-icon.rayquaza, .pokemon-preview.rayquaza { background-image: url('/rayquaza.gif'); }
-.pokemon-mini.regice, .pokemon-icon.regice, .pokemon-preview.regice { background-image: url('/regice.gif'); }
-.pokemon-mini.regirock, .pokemon-icon.regirock, .pokemon-preview.regirock { background-image: url('/regirock.gif'); }
-.pokemon-mini.registeel, .pokemon-icon.registeel, .pokemon-preview.registeel { background-image: url('/registeel.gif'); }
-.pokemon-mini.reshiram, .pokemon-icon.reshiram, .pokemon-preview.reshiram { background-image: url('/reshiram.gif'); }
-.pokemon-mini.rhyperior, .pokemon-icon.rhyperior, .pokemon-preview.rhyperior { background-image: url('/rhyperior.gif'); }
-.pokemon-mini.salamence, .pokemon-icon.salamence, .pokemon-preview.salamence { background-image: url('/salamence.gif'); }
-.pokemon-mini.sawk, .pokemon-icon.sawk, .pokemon-preview.sawk { background-image: url('/sawk.gif'); }
-.pokemon-mini.sceptile, .pokemon-icon.sceptile, .pokemon-preview.sceptile { background-image: url('/sceptile.gif'); }
-.pokemon-mini.scizor, .pokemon-icon.scizor, .pokemon-preview.scizor { background-image: url('/scizor.gif'); }
-.pokemon-mini.sharpedo, .pokemon-icon.sharpedo, .pokemon-preview.sharpedo { background-image: url('/sharpedo.gif'); }
-.pokemon-mini.shiftry, .pokemon-icon.shiftry, .pokemon-preview.shiftry { background-image: url('/shiftry.gif'); }
-.pokemon-mini.slowbro, .pokemon-icon.slowbro, .pokemon-preview.slowbro { background-image: url('/slowbro.gif'); }
-.pokemon-mini.snorlax, .pokemon-icon.snorlax, .pokemon-preview.snorlax { background-image: url('/snorlax.gif'); }
-.pokemon-mini.steelix, .pokemon-icon.steelix, .pokemon-preview.steelix { background-image: url('/steelix.gif'); }
-.pokemon-mini.swampert, .pokemon-icon.swampert, .pokemon-preview.swampert { background-image: url('/swampert.gif'); }
-.pokemon-mini.throh, .pokemon-icon.throh, .pokemon-preview.throh { background-image: url('/throh.gif'); }
-.pokemon-mini.torterra, .pokemon-icon.torterra, .pokemon-preview.torterra { background-image: url('/torterra.gif'); }
-.pokemon-mini.typhlosion, .pokemon-icon.typhlosion, .pokemon-preview.typhlosion { background-image: url('/typhlosion.gif'); }
-.pokemon-mini.tyranitar, .pokemon-icon.tyranitar, .pokemon-preview.tyranitar { background-image: url('/tyranitar.gif'); }
-.pokemon-mini.ursaring, .pokemon-icon.ursaring, .pokemon-preview.ursaring { background-image: url('/ursaring.gif'); }
-.pokemon-mini.vaporeon, .pokemon-icon.vaporeon, .pokemon-preview.vaporeon { background-image: url('/vaporeon.gif'); }
-.pokemon-mini.venusaur, .pokemon-icon.venusaur, .pokemon-preview.venusaur { background-image: url('/venusaur.gif'); }
-.pokemon-mini.zekrom, .pokemon-icon.zekrom, .pokemon-preview.zekrom { background-image: url('/zekrom.gif'); }
+.pokemon-mini.aerodactyl, .pokemon-icon.aerodactyl, .pokemon-preview.aerodactyl { background-image: url('aerodactyl.gif'); }
+.pokemon-mini.aggron, .pokemon-icon.aggron, .pokemon-preview.aggron { background-image: url('aggron.gif'); }
+.pokemon-mini.alakazam, .pokemon-icon.alakazam, .pokemon-preview.alakazam { background-image: url('alakazam.gif'); }
+.pokemon-mini.arceus, .pokemon-icon.arceus, .pokemon-preview.arceus { background-image: url('arceus.gif'); }
+.pokemon-mini.armaldo, .pokemon-icon.armaldo, .pokemon-preview.armaldo { background-image: url('armaldo.gif'); }
+.pokemon-mini.bastiodon, .pokemon-icon.bastiodon, .pokemon-preview.bastiodon { background-image: url('bastiodon.gif'); }
+.pokemon-mini.blastoise, .pokemon-icon.blastoise, .pokemon-preview.blastoise { background-image: url('blastoise.gif'); }
+.pokemon-mini.blaziken, .pokemon-icon.blaziken, .pokemon-preview.blaziken { background-image: url('blaziken.gif'); }
+.pokemon-mini.carracosta, .pokemon-icon.carracosta, .pokemon-preview.carracosta { background-image: url('carracosta.gif'); }
+.pokemon-mini.charizard, .pokemon-icon.charizard, .pokemon-preview.charizard { background-image: url('charizard.gif'); }
+.pokemon-mini.claydol, .pokemon-icon.claydol, .pokemon-preview.claydol { background-image: url('claydol.gif'); }
+.pokemon-mini.conkeldurr, .pokemon-icon.conkeldurr, .pokemon-preview.conkeldurr { background-image: url('conkeldurr.gif'); }
+.pokemon-mini.cresselia, .pokemon-icon.cresselia, .pokemon-preview.cresselia { background-image: url('cresselia.gif'); }
+.pokemon-mini.darkrai, .pokemon-icon.darkrai, .pokemon-preview.darkrai { background-image: url('darkrai.gif'); }
+.pokemon-mini.donphan, .pokemon-icon.donphan, .pokemon-preview.donphan { background-image: url('donphan.gif'); }
+.pokemon-mini.dragonite, .pokemon-icon.dragonite, .pokemon-preview.dragonite { background-image: url('dragonite.gif'); }
+.pokemon-mini.druddigon, .pokemon-icon.druddigon, .pokemon-preview.druddigon { background-image: url('druddigon.gif'); }
+.pokemon-mini.dusknoir, .pokemon-icon.dusknoir, .pokemon-preview.dusknoir { background-image: url('dusknoir.gif'); }
+.pokemon-mini.eelektross, .pokemon-icon.eelektross, .pokemon-preview.eelektross { background-image: url('eelektross.gif'); }
+.pokemon-mini.electivire, .pokemon-icon.electivire, .pokemon-preview.electivire { background-image: url('electivire.gif'); }
+.pokemon-mini.emboar, .pokemon-icon.emboar, .pokemon-preview.emboar { background-image: url('emboar.gif'); }
+.pokemon-mini.excadrill, .pokemon-icon.excadrill, .pokemon-preview.excadrill { background-image: url('excadrill.gif'); }
+.pokemon-mini.flygon, .pokemon-icon.flygon, .pokemon-preview.flygon { background-image: url('flygon.gif'); }
+.pokemon-mini.gallade, .pokemon-icon.gallade, .pokemon-preview.gallade { background-image: url('gallade.gif'); }
+.pokemon-mini.garchomp, .pokemon-icon.garchomp, .pokemon-preview.garchomp { background-image: url('garchomp.gif'); }
+.pokemon-mini.gardevoir, .pokemon-icon.gardevoir, .pokemon-preview.gardevoir { background-image: url('gardevoir.gif'); }
+.pokemon-mini.gengar, .pokemon-icon.gengar, .pokemon-preview.gengar { background-image: url('gengar.gif'); }
+.pokemon-mini.gigalith, .pokemon-icon.gigalith, .pokemon-preview.gigalith { background-image: url('gigalith.gif'); }
+.pokemon-mini.golem, .pokemon-icon.golem, .pokemon-preview.golem { background-image: url('golem.gif'); }
+.pokemon-mini.gyarados, .pokemon-icon.gyarados, .pokemon-preview.gyarados { background-image: url('gyarados.gif'); }
+.pokemon-mini.hariyama, .pokemon-icon.hariyama, .pokemon-preview.hariyama { background-image: url('hariyama.gif'); }
+.pokemon-mini.haxorus, .pokemon-icon.haxorus, .pokemon-preview.haxorus { background-image: url('haxorus.gif'); }
+.pokemon-mini.heatran, .pokemon-icon.heatran, .pokemon-preview.heatran { background-image: url('heatran.gif'); }
+.pokemon-mini.hitmonchan, .pokemon-icon.hitmonchan, .pokemon-preview.hitmonchan { background-image: url('hitmonchan.gif'); }
+.pokemon-mini.hitmonlee, .pokemon-icon.hitmonlee, .pokemon-preview.hitmonlee { background-image: url('hitmonlee.gif'); }
+.pokemon-mini.ho-oh, .pokemon-icon.ho-oh, .pokemon-preview.ho-oh { background-image: url('ho-oh.gif'); }
+.pokemon-mini.jirachi, .pokemon-icon.jirachi, .pokemon-preview.jirachi { background-image: url('jirachi.gif'); }
+.pokemon-mini.krookodile, .pokemon-icon.krookodile, .pokemon-preview.krookodile { background-image: url('krookodile.gif'); }
+.pokemon-mini.kyogre, .pokemon-icon.kyogre, .pokemon-preview.kyogre { background-image: url('kyogre.gif'); }
+.pokemon-mini.kyurem, .pokemon-icon.kyurem, .pokemon-preview.kyurem { background-image: url('kyurem.gif'); }
+.pokemon-mini.lapras, .pokemon-icon.lapras, .pokemon-preview.lapras { background-image: url('lapras.gif'); }
+.pokemon-mini.latios, .pokemon-icon.latios, .pokemon-preview.latios { background-image: url('latios.gif'); }
+.pokemon-mini.lopunny, .pokemon-icon.lopunny, .pokemon-preview.lopunny { background-image: url('lopunny.gif'); }
+.pokemon-mini.lucario, .pokemon-icon.lucario, .pokemon-preview.lucario { background-image: url('lucario.gif'); }
+.pokemon-mini.lugia, .pokemon-icon.lugia, .pokemon-preview.lugia { background-image: url('lugia.gif'); }
+.pokemon-mini.machamp, .pokemon-icon.machamp, .pokemon-preview.machamp { background-image: url('machamp.gif'); }
+.pokemon-mini.magmortar, .pokemon-icon.magmortar, .pokemon-preview.magmortar { background-image: url('magmortar.gif'); }
+.pokemon-mini.mamoswine, .pokemon-icon.mamoswine, .pokemon-preview.mamoswine { background-image: url('mamoswine.gif'); }
+.pokemon-mini.medicham, .pokemon-icon.medicham, .pokemon-preview.medicham { background-image: url('medicham.gif'); }
+.pokemon-mini.metagross, .pokemon-icon.metagross, .pokemon-preview.metagross { background-image: url('metagross.gif'); }
+.pokemon-mini.mew, .pokemon-icon.mew, .pokemon-preview.mew { background-image: url('mew.gif'); }
+.pokemon-mini.mewtwo, .pokemon-icon.mewtwo, .pokemon-preview.mewtwo { background-image: url('mewtwo.gif'); }
+.pokemon-mini.palkia, .pokemon-icon.palkia, .pokemon-preview.palkia { background-image: url('palkia.gif'); }
+.pokemon-mini.pikachu, .pokemon-icon.pikachu, .pokemon-preview.pikachu { background-image: url('pikachu.gif'); }
+.pokemon-mini.primeape, .pokemon-icon.primeape, .pokemon-preview.primeape { background-image: url('primeape.gif'); }
+.pokemon-mini.rampardos, .pokemon-icon.rampardos, .pokemon-preview.rampardos { background-image: url('rampardos.gif'); }
+.pokemon-mini.rayquaza, .pokemon-icon.rayquaza, .pokemon-preview.rayquaza { background-image: url('rayquaza.gif'); }
+.pokemon-mini.regice, .pokemon-icon.regice, .pokemon-preview.regice { background-image: url('regice.gif'); }
+.pokemon-mini.regirock, .pokemon-icon.regirock, .pokemon-preview.regirock { background-image: url('regirock.gif'); }
+.pokemon-mini.registeel, .pokemon-icon.registeel, .pokemon-preview.registeel { background-image: url('registeel.gif'); }
+.pokemon-mini.reshiram, .pokemon-icon.reshiram, .pokemon-preview.reshiram { background-image: url('reshiram.gif'); }
+.pokemon-mini.rhyperior, .pokemon-icon.rhyperior, .pokemon-preview.rhyperior { background-image: url('rhyperior.gif'); }
+.pokemon-mini.salamence, .pokemon-icon.salamence, .pokemon-preview.salamence { background-image: url('salamence.gif'); }
+.pokemon-mini.sawk, .pokemon-icon.sawk, .pokemon-preview.sawk { background-image: url('sawk.gif'); }
+.pokemon-mini.sceptile, .pokemon-icon.sceptile, .pokemon-preview.sceptile { background-image: url('sceptile.gif'); }
+.pokemon-mini.scizor, .pokemon-icon.scizor, .pokemon-preview.scizor { background-image: url('scizor.gif'); }
+.pokemon-mini.sharpedo, .pokemon-icon.sharpedo, .pokemon-preview.sharpedo { background-image: url('sharpedo.gif'); }
+.pokemon-mini.shiftry, .pokemon-icon.shiftry, .pokemon-preview.shiftry { background-image: url('shiftry.gif'); }
+.pokemon-mini.slowbro, .pokemon-icon.slowbro, .pokemon-preview.slowbro { background-image: url('slowbro.gif'); }
+.pokemon-mini.snorlax, .pokemon-icon.snorlax, .pokemon-preview.snorlax { background-image: url('snorlax.gif'); }
+.pokemon-mini.steelix, .pokemon-icon.steelix, .pokemon-preview.steelix { background-image: url('steelix.gif'); }
+.pokemon-mini.swampert, .pokemon-icon.swampert, .pokemon-preview.swampert { background-image: url('swampert.gif'); }
+.pokemon-mini.throh, .pokemon-icon.throh, .pokemon-preview.throh { background-image: url('throh.gif'); }
+.pokemon-mini.torterra, .pokemon-icon.torterra, .pokemon-preview.torterra { background-image: url('torterra.gif'); }
+.pokemon-mini.typhlosion, .pokemon-icon.typhlosion, .pokemon-preview.typhlosion { background-image: url('typhlosion.gif'); }
+.pokemon-mini.tyranitar, .pokemon-icon.tyranitar, .pokemon-preview.tyranitar { background-image: url('tyranitar.gif'); }
+.pokemon-mini.ursaring, .pokemon-icon.ursaring, .pokemon-preview.ursaring { background-image: url('ursaring.gif'); }
+.pokemon-mini.vaporeon, .pokemon-icon.vaporeon, .pokemon-preview.vaporeon { background-image: url('vaporeon.gif'); }
+.pokemon-mini.venusaur, .pokemon-icon.venusaur, .pokemon-preview.venusaur { background-image: url('venusaur.gif'); }
+.pokemon-mini.zekrom, .pokemon-icon.zekrom, .pokemon-preview.zekrom { background-image: url('zekrom.gif'); }
 
 .attacking {
     animation: attack-animation 0.5s ease-in-out;
@@ -606,7 +606,7 @@ body::before {
     top: 2px;
 }
 
-/* Team selection styles */
+* Team selection styles *
 .selection-instruction {
     color: #ff0000;
     margin-bottom: 15px;
@@ -681,7 +681,7 @@ body::before {
     z-index: 2;
 }
 
-/* Pokemon switch menu */
+* Pokemon switch menu *
 .pokemon-switch-menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -740,7 +740,7 @@ body::before {
     width: 100%;
 }
 
-/* Selection screen */
+* Selection screen *
 .selection-screen {
     width: 1000px;
     background-color: #000000;
