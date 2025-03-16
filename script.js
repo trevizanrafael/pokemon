@@ -13,17 +13,35 @@ class Pokemon {
         const move = this.moves[moveIndex];
         const damage = this.calculateDamage(move, target);
         
-        target.takeDamage(damage);
-        return {
-            moveName: move.name,
-            damage: damage
-        };
+        if (damage < 0) {
+            // Healing move - apply to self
+            this.heal(-damage); // Negative damage means healing
+            return {
+                moveName: move.name,
+                damage: damage,
+                healing: true
+            };
+        } else {
+            // Damaging move - apply to target
+            target.takeDamage(damage);
+            return {
+                moveName: move.name,
+                damage: damage,
+                healing: false
+            };
+        }
     }
     
     calculateDamage(move, target) {
         // Factor in accuracy
         if (Math.random() * 100 > move.accuracy) {
             return 0; // Miss
+        }
+        
+        // Healing moves
+        if (move.power === 0 && ["Recover", "Moonlight", "Roost", "Soft-Boiled", "Rest", "Slack Off", "Synthesis"].includes(move.name)) {
+            // Return negative damage to indicate healing
+            return -Math.floor(this.maxHp * 0.35);
         }
         
         // Basic damage factor
@@ -156,7 +174,7 @@ const pokemonDatabase = {
         level: 50,
         moves: [
             new Move("Hydro Pump", "water", 110, 80),
-            new Move("Ice Beam", "water", 90, 100),
+            new Move("Ice Beam", "normal", 90, 100),
             new Move("Earthquake", "normal", 100, 100),
             new Move("Protect", "normal", 0, 100)
         ]
@@ -1099,7 +1117,7 @@ function initGame() {
     });
 
     runBtn.addEventListener("click", () => {
-        displayMessage("Não é possível fugir de uma batalha contra um treinador!");
+        resetGame();
     });
 
     attackBtns.forEach((btn, index) => {
@@ -1357,6 +1375,28 @@ function executePlayerTurn(moveIndex) {
 
     displayMessage(`${activePlayerPokemon.name} usou ${result.moveName}!`);
 
+    // Healing move
+    if (result.healing) {
+        const healAmount = -result.damage;
+        
+        // Show healing animation
+        playerSpriteEl.classList.add("healing");
+        
+        setTimeout(() => {
+            playerSpriteEl.classList.remove("healing");
+            updateBattleUI();
+            
+            displayMessage(`${activePlayerPokemon.name} recuperou HP!`);
+            
+            setTimeout(() => {
+                turnState = "enemyTurn";
+                executeEnemyTurn();
+            }, 1500);
+        }, 1500);
+        
+        return;
+    }
+
     // Check if the attack missed
     if (result.damage === 0) {
         displayMessage(`${result.moveName} errou!`);
@@ -1370,7 +1410,7 @@ function executePlayerTurn(moveIndex) {
     // Animate attack
     playerSpriteEl.classList.add("attacking");
 
-    showAttackAnimation(move.type, "enemy");
+    showAttackAnimation(move.type, "player", "enemy");
 
     setTimeout(() => {
         playerSpriteEl.classList.remove("attacking");
@@ -1456,6 +1496,27 @@ function executeEnemyTurn() {
 
     displayMessage(`${activeEnemyPokemon.name} inimigo usou ${result.moveName}!`);
 
+    // Healing move
+    if (result.healing) {
+        const healAmount = -result.damage;
+        
+        // Show healing animation
+        enemySpriteEl.classList.add("healing");
+        
+        setTimeout(() => {
+            enemySpriteEl.classList.remove("healing");
+            updateBattleUI();
+            
+            displayMessage(`${activeEnemyPokemon.name} inimigo recuperou HP!`);
+            
+            setTimeout(() => {
+                turnState = "playerTurn";
+                displayMessage(`O que ${activePlayerPokemon.name} vai fazer?`);
+            }, 1500);
+        }, 1500);
+        
+        return;
+    }
     // Check if the attack missed
     if (result.damage === 0) {
         displayMessage(`${result.moveName} errou!`);
@@ -1469,7 +1530,7 @@ function executeEnemyTurn() {
     // Animate attack
     enemySpriteEl.classList.add("attacking");
 
-    showAttackAnimation(move.type, "player");
+    showAttackAnimation(move.type, "enemy", "player");
 
     setTimeout(() => {
         enemySpriteEl.classList.remove("attacking");
@@ -1514,12 +1575,39 @@ function executeEnemyTurn() {
     }, 1000);
 }
 
-function showAttackAnimation(moveType, target) {
+function showAttackAnimation(moveType, source, target) {
     const battleScene = document.querySelector(".battle-scene");
     const attackAnimation = document.createElement("div");
-    attackAnimation.className = `attack-animation ${moveType}-attack ${target}-target`;
+    attackAnimation.className = `attack-animation ${moveType}-attack`;
     battleScene.appendChild(attackAnimation);
 
+    // Get source and target elements
+    const sourceElement = source === "player" ? playerSpriteEl : enemySpriteEl;
+    const targetElement = target === "player" ? playerSpriteEl : enemySpriteEl;
+    const sourceRect = sourceElement.getBoundingClientRect();
+    const targetRect = targetElement.getBoundingClientRect();
+    const sceneRect = battleScene.getBoundingClientRect();
+    
+    // Calculate start and end positions
+    const startX = sourceRect.left - sceneRect.left + sourceRect.width/2;
+    const startY = sourceRect.top - sceneRect.top + sourceRect.height/2;
+    const endX = targetRect.left - sceneRect.left + targetRect.width/2;
+    const endY = targetRect.top - sceneRect.top + targetRect.height/2;
+    
+    // Set initial position at source
+    attackAnimation.style.position = "absolute";
+    attackAnimation.style.left = `${startX}px`;
+    attackAnimation.style.top = `${startY}px`;
+    
+    // Animate from source to target
+    attackAnimation.style.transition = "left 0.8s ease-out, top 0.8s ease-out";
+    
+    // Start animation in the next frame
+    setTimeout(() => {
+        attackAnimation.style.left = `${endX}px`;
+        attackAnimation.style.top = `${endY}px`;
+    }, 50);
+    
     setTimeout(() => {
         battleScene.removeChild(attackAnimation);
     }, 1000);
